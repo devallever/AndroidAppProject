@@ -44,6 +44,9 @@ ext {
     androidXLifecycleViewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
     androidXLifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:2.2.0"
 
+    //LiveData
+    androidXLifeCycleLiveDataKtx = "androidx.lifecycle:lifecycle-livedata-ktx:2.3.1"
+
     kotlinxCoroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1"
     kotlinxCoroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1"
 
@@ -182,7 +185,7 @@ ext {
 
     androidAudioConverter = "com.github.adrielcafe:AndroidAudioConverter:0.0.8"
 
-    photoView = "com.bm.photoview:library:1.4.1"
+    photoView = "com.bm.photoview:librar                                     ，                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 y:/1.4.1"
     chrisbanesPhotoView = "com.github.chrisbanes:PhotoView:2.0.0"
 
     androidOAID = "com.github.gzu-liyujiang:Android_CN_OAID:4.2.4"
@@ -202,6 +205,9 @@ ext {
     baseRecyclerViewAdapterHelper = "com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4"
 
     basePopup = "io.github.razerdp:BasePopup:3.2.0"
+
+    //鲁班图片压缩
+    luban = "top.zibin:Luban:1.1.8"
 //Other---------------------------------------------------------------------------------------------
 }
 
