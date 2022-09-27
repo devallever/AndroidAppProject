@@ -25,13 +25,11 @@ abstract class BaseActivity<DB : ViewDataBinding, VM : BaseViewModel> :
         }
 
         if (showTopBar())
-        StatusBarCompat.translucentStatusBar(this, true)
+            StatusBarCompat.translucentStatusBar(this, true)
         //状态栏颜色
         if (isDarkMode()) {
-            if (showTopBar())
             StatusBarCompat.cancelLightStatusBar(this)
         } else {
-            if (showTopBar())
             StatusBarCompat.changeToLightStatusBar(this)
         }
 
@@ -51,7 +49,7 @@ abstract class BaseActivity<DB : ViewDataBinding, VM : BaseViewModel> :
             }
         }
         setVisibility(mBinding.topBar, showTopBar())
-        setVisibility(mBinding.statusBar, showTopBar())
+        setVisibility(mBinding.statusBar, showStatusBar())
     }
 
     override fun getMvvmConfig() = MvvmConfig(R.layout.activity_base, -1)
@@ -63,6 +61,8 @@ abstract class BaseActivity<DB : ViewDataBinding, VM : BaseViewModel> :
     protected open fun enableAdaptStatusBar(): Boolean = true
 
     protected open fun showTopBar(): Boolean = true
+
+    protected open fun showStatusBar(): Boolean = true
 
     protected open fun initTopBar(title: String?, showBackIcon: Boolean = true, leftClickListener: Runnable? = null) {
         ViewHelper.setVisible(mBinding.tvTitle, !TextUtils.isEmpty(title))
@@ -93,6 +93,10 @@ abstract class BaseActivity<DB : ViewDataBinding, VM : BaseViewModel> :
      * @return isDarkMode
      */
     protected open fun isDarkMode(): Boolean {
+        return false
+    }
+
+    protected open fun enableEventBus(): Boolean {
         return false
     }
 }
